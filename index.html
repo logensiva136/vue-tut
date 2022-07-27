@@ -17,9 +17,15 @@
   </header>
   <section id="events">
     <h2>Events in Action</h2>
-    <button @click="add">Add</button>
-    <button @click="reduce">Remove</button>
+    <button @click="add(10)">Add</button>
+    <button @click="reduce(5)">Remove</button>
     <p>Result: {{ counter }}</p>
+    <input type="text" @input="getName($event,' Maratthandavar')">
+    <p>Your Name : {{theName}}</p>
+    <form action="">
+      <input type="text">
+      <button>Sign Up</button>
+    </form>
   </section>
 </body>
 
