@@ -3,10 +3,20 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: "",
+      lastname: "",
       fullname: "",
     };
   },
-  watch: {},
+  watch: {
+    name(val) {
+      val === "" ? (this.fullname = "") : (this.fullname = val + this.lastName);
+    },
+    lastName(val) {
+      val === ""
+        ? (this.fullname = "")
+        : (this.fullname = this.name + " " + this.lastName);
+    },
+  },
   computed: {
     // fullname() {
     //   console.log("LOGEN");
