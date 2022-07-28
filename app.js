@@ -17,14 +17,7 @@ const app = Vue.createApp({
         : (this.fullname = this.name + " " + this.lastName);
     },
   },
-  computed: {
-    // fullname() {
-    //   console.log("LOGEN");
-    //   return this.name === ""
-    //     ? (this.name = "")
-    //     : this.name + " Maratthandavar";
-    // },
-  },
+  computed: {},
   methods: {
     setName(event, lastName) {
       this.name = event.target.value;
