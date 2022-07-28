@@ -3,7 +3,17 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: "",
+      fullname: "",
     };
+  },
+  watch: {},
+  computed: {
+    // fullname() {
+    //   console.log("LOGEN");
+    //   return this.name === ""
+    //     ? (this.name = "")
+    //     : this.name + " Maratthandavar";
+    // },
   },
   methods: {
     setName(event, lastName) {
@@ -15,6 +25,9 @@ const app = Vue.createApp({
     reduce(num) {
       this.counter = this.counter - num;
       // this.counter--;
+    },
+    resetInput() {
+      this.name = "";
     },
   },
 });
